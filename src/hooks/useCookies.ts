@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 // import { encryptAES, decryptAES } from '@/utils/crypts';
-import { getCookie } from '../utils/cookies/getCookie';
-import { setCookie } from '../utils/cookies/setCookie';
-import { removeCookie } from '../utils/cookies/removeCookie';
+import { getCookie } from "../utils/cookies/getCookie";
+import { setCookie } from "../utils/cookies/setCookie";
+import { removeCookie } from "../utils/cookies/removeCookie";
 
 export function useCookies<T>(
   key: string,
   initialValue: T,
   options?: {
     encrypt?: boolean;
-  }
+  },
 ): [T | null, (x: T) => void, () => void] {
   // State to store our value
   // Pass initial state function to useState so logic is only executed once

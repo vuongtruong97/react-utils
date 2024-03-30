@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-const useOnScreen = (ref: React.RefObject<HTMLElement>, rootMargin = '0px') => {
+const useOnScreen = (ref: React.RefObject<HTMLElement>, rootMargin = "0px") => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -8,7 +8,7 @@ const useOnScreen = (ref: React.RefObject<HTMLElement>, rootMargin = '0px') => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { rootMargin }
+      { rootMargin },
     );
 
     const currentElement = ref.current;

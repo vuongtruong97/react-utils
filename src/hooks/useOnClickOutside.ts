@@ -1,8 +1,8 @@
-import { MutableRefObject, useEffect } from 'react';
+import { MutableRefObject, useEffect } from "react";
 
 export default function useOnClickOutside(
   ref: MutableRefObject<Element | null>,
-  handler: (event: any) => void | undefined
+  handler: (event: any) => void | undefined,
 ) {
   useEffect(
     () => {
@@ -15,12 +15,12 @@ export default function useOnClickOutside(
         handler?.(event);
       };
 
-      document.addEventListener('mousedown', listener);
-      document.addEventListener('touchstart', listener);
+      document.addEventListener("mousedown", listener);
+      document.addEventListener("touchstart", listener);
 
       return () => {
-        document.removeEventListener('mousedown', listener);
-        document.removeEventListener('touchstart', listener);
+        document.removeEventListener("mousedown", listener);
+        document.removeEventListener("touchstart", listener);
       };
     },
     // Add ref and handler to effect dependencies
@@ -29,6 +29,6 @@ export default function useOnClickOutside(
     // ... callback/cleanup to run every render. It's not a big deal ...
     // ... but to optimize you can wrap handler in useCallback before ...
     // ... passing it into this hook.
-    [ref, handler]
+    [ref, handler],
   );
 }
