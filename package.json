@@ -1,0 +1,30 @@
+{
+  "name": "react-utils",
+  "version": "1.0.0",
+  "description": "react utils and hook",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "react-utils"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "utils"
+  ],
+  "author": "Vuong Truong",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^18.2.73",
+    "@types/react-dom": "^18.2.23",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}
